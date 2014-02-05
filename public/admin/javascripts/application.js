@@ -1,3 +1,5 @@
+
+
 !function($) {
   'use strict';
 
@@ -110,6 +112,9 @@
         generalToggle();
       });
     }
+
+    $("textarea").height( $("textarea")[0].scrollHeight );
+
 
     // Autofocus first field with an error. (usability)
     $('.has-error :input').first().focus();

@@ -33,6 +33,7 @@ module Emergence
     end
 
     access_control.roles_for :admin do |role|
+    role.project_module :uploads, '/uploads'
     role.project_module :profiles, '/profiles'
     role.project_module :pages, '/pages'
     role.project_module :events, '/events'

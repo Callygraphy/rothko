@@ -27,7 +27,6 @@ div class="tabs-content"
                       div class='btn btn-default btn-small cancel' = pat(:cancel)
         th class='header' = mat(:chapter, :id)
         th class='header' = mat(:chapter, :title)
-        th class='header' = mat(:chapter, :body)
         th class='header list-row-action-header'
 
     tbody
@@ -36,7 +35,6 @@ div class="tabs-content"
           td class='list-column list-selectable' = check_box_tag 'chapter_ids[]', :value => chapter.id, :class => 'list-selectable-checkbox'
           td class='list-column' = chapter.id
           td class='list-column' = chapter.title
-          td class='list-column' = chapter.body
           td class='list-column list-row-action'
             div class='list-row-action-wrapper'
               = link_to tag_icon(:edit), :href => url(:chapters, :edit, :id => chapter.id), :rel => :tooltip, :title => "#{pat(:edit)} chapter", :class => 'list-row-action-wrapper-link'

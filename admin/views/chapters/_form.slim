@@ -1,18 +1,13 @@
-- error = @chapter.errors.key?(:title) && @chapter.errors[:title].count > 0
-fieldset class='control-group#{error ? ' has-error' : ''}'
-  = f.label :title, :class => 'control-label'
-  div class='controls'
-    = f.text_field :title, :class => 'form-control input-large input-with-feedback', :autofocus => true
-    span class='help-inline' = error ? f.error_message_on(:title, :class => 'text-error') : pat(:example)
 
+fieldset class=''
+  div contenteditable="true"
+    h1 = @chapter.title 
 
-- error = @chapter.errors.key?(:body) && @chapter.errors[:body].count > 0
-fieldset class='control-group#{error ? ' has-error' : ''}'
-  = f.label :body, :class => 'control-label'
-  div class='controls'  id="wmd-panel"
-    div id="wmd-button-bar"
-    = f.text_area :body, :class => 'form-control input-large input-with-feedback wmd-input', :id => "wmd-input"
-    div id="wmd-preview" class="wmd-panel wmd-preview"
+div class='controls'  id="wmd-panel"
+  div id="wmd-button-bar"
+  = f.text_area :body, :class => 'wmd-input col-md-6 col-lg-6', :id => "wmd-input"
+  div id="wmd-preview" class="wmd-panel wmd-preview  col-md-6 col-lg-6"
+
 
 div class="form-actions"
   = f.submit pat(:save), :class => 'btn btn-primary'
@@ -20,6 +15,8 @@ div class="form-actions"
   = f.submit pat(:save_and_continue), :class => 'btn btn-info', :name => 'save_and_continue'
   |&nbsp;
   = link_to pat(:cancel), url(:chapters, :index), :class => 'btn btn-default'
+
+
 
 
 javascript:  

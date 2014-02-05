@@ -1,7 +1,13 @@
 Emergence::Site.controllers  do
   
   get '/' do
-    'Hello world!'
+    slim :index
+  end
+
+  get '/chapters' do
+    @chapters = Chapter.all
+    slim :chapters_index
+
   end
 
 
@@ -12,6 +18,12 @@ Emergence::Site.controllers  do
     markdown = Redcarpet::Markdown.new(HTMLWithPants, :autolink => true, :with_toc_data => true)
     @body = markdown.render(@chapter.body)
     slim :chapters
+
+  end
+
+  get '/profiles/' do
+    @profiles = Profile.all
+    slim :profiles
 
   end
 
