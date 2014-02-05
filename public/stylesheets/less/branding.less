@@ -1,0 +1,56 @@
+//branding
+@import "variables.less";
+
+
+#big-logo{ 
+a {color: #fff}
+
+
+padding: 100px 0 100px 0;
+
+h1 {     
+    margin: 7px 0 7px 0;
+    text-align: left;
+    line-height: 0.6em;
+    font-size: 4em;
+    font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B'; font-weight: 500; font-style: normal;    
+
+      }
+
+.logo {
+  margin-left: -5px;
+  width: 100%;
+ }
+
+  @media (min-width: @screen-md-min) { 
+    padding: 200px 0 200px 0;
+
+    h1 {font-size: 3.5em; margin: 7px 0 7px 0;}
+     }
+   
+  @media (min-width: @screen-sm-min) {
+    h1 {font-size: 1em;
+            margin: 7px 0 7px 0;}
+  }
+  @media (min-width: @screen-lg-min) {
+    h1 {font-size: 1em;
+            margin:12px 0 20px 0;
+}
+
+  }
+ 
+}
+#small-logo{
+  margin-right:20px;
+
+  #big-logo;
+  
+  margin-bottom: 20px;
+  
+
+  h1{ font-size: 3rem;
+      margin: 3px 0 8px 0;
+  }
+
+
+}

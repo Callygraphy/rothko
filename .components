@@ -1,0 +1,10 @@
+---
+:orm: datamapper
+:test: none
+:mock: none
+:script: jquery
+:renderer: slim
+:stylesheet: none
+:namespace: Emergence
+:migration_format: number
+:admin_renderer: slim

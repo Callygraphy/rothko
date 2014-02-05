@@ -1,0 +1,317 @@
+@import 'normalize.css';
+@import 'all.css';
+
+// Core variables and mixins
+@import "variables.less";
+@import "mixins.less";
+
+// Core CSS
+@import "scaffolding.less";
+@import "grid.less";
+
+//branding
+@import "branding.less";
+
+
+//constants 
+
+@body-colour:  #4a4a4a;
+
+@nav-blue: #47C2D6;
+
+@yellow: #FFE773;
+
+@green: #87CCA3;
+
+// mixins
+
+.text-box{ 
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 14px;
+  @media (max-width: @screen-sm-max) {
+  margin-left: 15px;
+  }
+
+}
+
+
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom:1.6em;
+}
+
+
+canvas {position: absolute;
+  z-index: -10;
+ left: 0;
+   
+  @media (max-width: @screen-sm-max) {
+  top: 70px;
+
+  }
+  @media (min-width: @screen-md-min) {
+  top: 0px;
+
+}
+
+}
+
+.standfirst {
+      font-size: 3rem;
+      line-height: 4rem;
+}
+
+//hacky fix for iframe height, fix later
+.video {
+  height:480px;
+  margin-right: 0px;
+}
+
+
+//sections
+
+.splash-text{
+	color:#fff;
+}
+
+header {
+
+              padding-top: 20px;
+              margin-bottom: 50px;
+.nav{
+  .pull-right;
+  background-color: @nav-blue;
+        padding: 15px;
+        margin-top: 15px;
+  border-radius: 10px;}
+
+  ul {padding : 0px}
+
+  li {
+  float: left;
+  list-style: none;
+ margin: 0 10px 0 10px;
+  }
+}
+
+footer {
+  text-align:center;
+  font-size: 1.2rem;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  border-top: 1px dotted #fff;
+
+}
+
+
+//typography
+
+h2 a { 
+border-bottom:none;
+	color: @body-colour;
+
+}
+h2 a:hover {
+	border-bottom: none;
+	color: @nav-blue;
+
+}
+
+.intro-text {
+  font-size: 2.3rem;
+  line-height: 3rem;
+
+}
+
+.biblio p {
+  margin-bottom: 10px;
+}
+
+//features
+
+#related-links {
+.text-box;
+    background: @nav-blue;
+    h2 {font-size: 3rem;}
+ .img-responsive {
+    margin-bottom: 10px;}
+}
+
+.evidence {
+  .make-md-column(9);
+  .make-lg-column(9);
+
+  .text-box;
+
+  background-color: #fff;
+  color: @body-colour;
+
+  img {
+  .img-responsive;
+  margin:auto;
+  }
+  
+  }
+
+
+.view-1, .view-2{
+    .evidence;
+}
+
+.view-1 {
+      background: @yellow;
+
+}
+
+.view-2 {
+        background: @green;
+        }
+
+
+
+ .plus {
+      background: #fff;
+      width: 32px;
+      height:50px;
+      border-radius: 25px;
+      float:left;
+      margin-left: -32px;
+      padding-left:5px;
+
+      a {
+        border: none;
+        font-size: 10rem;
+      line-height: 50px;
+
+      }
+
+      a:hover {
+        color: @nav-blue;
+        border: none;
+      }
+
+      .popover-content, .popover-title {
+          color: @body-colour;
+          font-size: 1.2rem;
+      }
+}       
+
+#top {
+  
+}
+
+#about{
+  background: @yellow;
+}
+#events{
+  background: @green;
+}
+
+#desc {
+
+  background: #fff;
+}
+
+.intro {
+  .text-box;
+  .make-md-column(8);
+  .make-lg-column(8);
+}
+
+
+#body{
+  background: #fff;
+ 
+}
+
+.body {
+  .text-box;
+  .make-md-column(8);
+  .make-lg-column(8);
+
+  padding-left: 10%;
+
+}
+
+.desc {
+  .intro;
+
+}
+
+.events {
+  .text-box;
+
+  .make-md-column(6);
+  .make-lg-column(6);
+  
+  padding-left: 0px;
+  @media (max-width: @screen-sm-max) {
+  margin-left: 0px;
+  }
+
+
+}
+
+.contact {
+  .text-box;
+
+  .make-md-column(8);
+  .make-lg-column(8);
+  
+}
+
+nav {
+  .text-box;
+    .make-md-column(2.5);
+  .make-lg-column(2.5);
+  padding: 20px 20px 10px 20px;
+  position: fixed;
+  top: 100px;
+  right: 8%;
+  // width: 275px;
+  background: @nav-blue;
+  margin-bottom: 0px;
+  ul {
+      list-style: none;
+      padding-left: 5px;
+      font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B'; font-weight: 500; font-style: normal;    
+      margin-bottom: 0px;
+    }
+  li{margin-bottom: 15px;}
+
+@media (min-width: @screen-md-min) { 
+    top: 200px;
+     }
+
+}
+
+.slide-trigger {
+  display: none; /* need this */
+  cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 993px) {
+  nav { position: relative;
+        width:100%;
+        top: 0px;
+        right: 0px;
+        border-radius: 0;
+        z-index: 100;}
+  nav ul { display: none; } 
+  .slide-trigger { display: block; } 
+}
+
+
+

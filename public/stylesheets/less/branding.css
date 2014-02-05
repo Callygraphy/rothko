@@ -1,0 +1,86 @@
+#big-logo {
+  padding: 100px 0 100px 0;
+}
+#big-logo a {
+  color: #ffffff;
+}
+#big-logo h1 {
+  margin: 7px 0 7px 0;
+  text-align: left;
+  line-height: 0.6em;
+  font-size: 4em;
+  font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B';
+  font-weight: 500;
+  font-style: normal;
+}
+#big-logo .logo {
+  margin-left: -5px;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  #big-logo {
+    padding: 200px 0 200px 0;
+  }
+  #big-logo h1 {
+    font-size: 3.5em;
+    margin: 7px 0 7px 0;
+  }
+}
+@media (min-width: 768px) {
+  #big-logo h1 {
+    font-size: 1em;
+    margin: 7px 0 7px 0;
+  }
+}
+@media (min-width: 1200px) {
+  #big-logo h1 {
+    font-size: 1em;
+    margin: 12px 0 20px 0;
+  }
+}
+#small-logo {
+  margin-right: 20px;
+  padding: 100px 0 100px 0;
+  margin-bottom: 20px;
+}
+#small-logo a {
+  color: #ffffff;
+}
+#small-logo h1 {
+  margin: 7px 0 7px 0;
+  text-align: left;
+  line-height: 0.6em;
+  font-size: 4em;
+  font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B';
+  font-weight: 500;
+  font-style: normal;
+}
+#small-logo .logo {
+  margin-left: -5px;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  #small-logo {
+    padding: 200px 0 200px 0;
+  }
+  #small-logo h1 {
+    font-size: 3.5em;
+    margin: 7px 0 7px 0;
+  }
+}
+@media (min-width: 768px) {
+  #small-logo h1 {
+    font-size: 1em;
+    margin: 7px 0 7px 0;
+  }
+}
+@media (min-width: 1200px) {
+  #small-logo h1 {
+    font-size: 1em;
+    margin: 12px 0 20px 0;
+  }
+}
+#small-logo h1 {
+  font-size: 3rem;
+  margin: 3px 0 8px 0;
+}
